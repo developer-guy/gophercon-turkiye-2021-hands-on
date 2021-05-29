@@ -35,7 +35,7 @@ $ kubectl get nodes -o wide
 Now, it is time for deploying our first Google Cloud Function.
 
 ```bash
-$ gcloud deploy functions Validate --runtime go113 --trigger-http --allow-unauthenticated
+$ gcloud functions deploy Validate --runtime go113 --trigger-http --allow-unauthenticated
 ```
 
 Once it's deployed, let's grap the url of the function for later use.
