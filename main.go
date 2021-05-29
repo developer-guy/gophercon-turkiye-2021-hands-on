@@ -37,13 +37,14 @@ func Validate(rw http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	fmt.Println(fmt.Sprintf("handling request: %s", body))
+
 	requestedAdmissionReview := v1.AdmissionReview{}
 	if _, _, err := universalDeserializer.Decode(body, nil, &requestedAdmissionReview); err != nil {
 		fmt.Println(fmt.Sprintf("Error parsing body %v", err))
 		http.Error(rw, "Error parsing body", http.StatusBadRequest)
 		return
 	}
-	fmt.Println(fmt.Sprintf("requestedAdmissionReview: %v", requestedAdmissionReview))
 
 	responseAdmissionReview := v1.AdmissionReview{}
 	responseAdmissionReview.TypeMeta = requestedAdmissionReview.TypeMeta
