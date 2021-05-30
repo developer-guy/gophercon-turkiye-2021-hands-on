@@ -2,6 +2,8 @@
 
 ![webhook](./assets/validating_webhook.png)
 
+> Slides: https://docs.google.com/presentation/d/1v-pwXe5izWIF9v_pkpsjqb2c-2CZe9EEDda17tqaVgg/edit?usp=sharing
+
 ### Prerequisites
 
 * gcloud 342.0.0
